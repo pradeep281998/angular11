@@ -10,7 +10,7 @@ pipeline {
       
        steps {
                  
-                git branch: 'divyangjoshi-patch-1', credentialsId: 'gitaccid', url: 'https://github.com/BroadSparkDev/tsu-web-app.git'
+                 git credentialsId: 'eed97c7c-25ae-49e8-9fd7-81ee0b9a937a', url: 'https://github.com/pradeep281998/angular11.git'
                
             }
             
