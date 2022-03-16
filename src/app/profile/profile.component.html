@@ -1,0 +1,61 @@
+<form [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+<div class="container rounded bg-white mt-5">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+            
+
+                <!-- Received Image:
+                
+                {{ receivedImageData[''] | json}}
+                <img [src]="convertedImage" class="rounded-circle mt-5" > -->
+                <div>
+                    <img [src]="imgURL" class="rounded-circle mt-5" height="90" *ngIf="imgURL">
+                    <input type="file" (change)="onFileChanged($event)">
+                   
+                </div>
+                <!-- <div>
+                <input type="button" (click)="onUpload()" value="upload">
+                </div> -->
+
+               
+
+                <!-- <img class="rounded-circle mt-5" [src]="url" width="90">
+                <input type="file" id="image" formControlName="img" accept="image/*" (change)="selectFile($event)"> -->
+                
+                <!-- <span class="font-weight-bold">John Doe</span><span class="text-black-50">john_doe12@bbb.com</span>
+                <span>United States</span> -->
+                </div>
+        </div>
+<div>
+        <!-- <angular-file-uploader
+      [config]="afuConfig">
+      <img class="rounded-circle mt-5" [src]="url" width="90">
+</angular-file-uploader> -->
+</div>
+        <div class="col-md-8">
+            <div class="p-3 py-5">
+
+                <div class="row mt-2">
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="firstName" placeholder="First name"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="lastName" placeholder="Last name"></div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><input type="date" class="form-control" formControlName="date" id="date" name="date"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="phone" placeholder="Phone number"></div> 
+                   </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="address" placeholder="address"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="country" placeholder="Country"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="password" placeholder="Password"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" formControlName="retypepassword" placeholder="re-type password"></div>
+                </div>
+                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
